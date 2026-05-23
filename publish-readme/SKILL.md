@@ -52,8 +52,8 @@ git remote get-url origin
 
 ### Step 3 — Create GitHub repo (only if no remote exists)
 
+Ask: "Should this repo be public or private?"
 Ask: "What should the repo be named? (default: {{current directory name}})"
-Ask: "Public or private?"
 
 ```bash
 gh repo create {{name}} --{{public|private}} --source=. --remote=origin
