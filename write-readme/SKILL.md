@@ -1,3 +1,8 @@
+---
+name: write-readme
+description: Generate a structured, audience-aware README.md for any project. Use when the user wants to create or generate a README for their project.
+---
+
 # write-readme
 
 Generate a structured, audience-aware README.md for any project.

@@ -1,3 +1,8 @@
+---
+name: publish-readme
+description: Push a project's README.md to GitHub and set the repo's About description and topics automatically. Use when the user wants to publish their README to GitHub.
+---
+
 # publish-readme
 
 Push a project's README.md to GitHub and set the repo's About description and topics automatically.
