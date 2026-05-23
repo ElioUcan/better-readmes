@@ -1,5 +1,7 @@
 # better-readmes
 
+[![skills.sh](https://skills.sh/b/ElioUcan/better-readmes)](https://skills.sh/ElioUcan/better-readmes)
+
 Two Claude Code skills that generate structured, audience-aware README files and publish them to GitHub automatically.
 
 ## Skills
