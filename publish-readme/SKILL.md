@@ -136,10 +136,27 @@ If user says no → print: "Cancelled. Run /publish-readme again when you're rea
 
 ### Step 7 — Push
 
+Detect whether README.md is already tracked by git:
+```bash
+git log --oneline -- README.md
+```
+- If output is empty → default commit message is `docs: add README`
+- If output has lines → default commit message is `docs: update README`
+
+Detect the current branch:
+```bash
+git branch --show-current
+```
+
+Ask the user:
+> "Commit message (press Enter for default: '{{default message}}')"
+
+Use the user's input if provided, otherwise use the default.
+
 ```bash
 git add README.md
-git commit -m "docs: add README"
-git push -u origin main
+git commit -m "{{commit message}}"
+git push -u origin {{current branch}}
 ```
 
 After a successful push, print:
