@@ -37,6 +37,12 @@ If this fails → print: "Not authenticated with GitHub. Run: gh auth login"
 Check that `README.md` exists in the current working directory.
 If missing → print: "No README.md found in this directory. Run /write-readme first."
 
+**Check 4: git repo initialized**
+```bash
+git rev-parse --is-inside-work-tree
+```
+If this fails → print: "No git repository found. Run: git init"
+
 ---
 
 ### Step 2 — Detect existing remote
@@ -53,7 +59,8 @@ git remote get-url origin
 ### Step 3 — Create GitHub repo (only if no remote exists)
 
 Ask: "Should this repo be public or private?"
-Ask: "What should the repo be named? (default: {{current directory name}})"
+
+Wait for the answer, then ask: "What should the repo be named? (default: {{current directory name}})"
 
 ```bash
 gh repo create {{name}} --{{public|private}} --source=. --remote=origin
@@ -65,7 +72,7 @@ gh repo create {{name}} --{{public|private}} --source=. --remote=origin
 
 Read the README.md:
 - Line starting with `#` → project title
-- First 3 bullet points under `## Features` → key capabilities
+- First 3 bullet points under the Features section → key capabilities (match any line containing "Features", e.g. `## Features` or `## ✨ Features`)
 
 From this, generate a one-sentence plain-text description. Rules:
 - Max 350 characters
