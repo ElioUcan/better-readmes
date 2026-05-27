@@ -17,6 +17,7 @@
 - **Hero image + video** — add a banner image at the top and a demo video (plain link or clickable thumbnail).
 - **Shield.io badges** — renders detected technologies as `for-the-badge` shields automatically.
 - **`/publish-readme`** — pushes the README to GitHub, creating the repo if needed and setting the About description and topics via the GitHub CLI.
+- **Smart publish** — detects the current branch automatically, defaults the commit message to `docs: add README` on first publish or `docs: update README` on subsequent ones, with a prompt to override.
 
 ## 🎯 Uses
 
