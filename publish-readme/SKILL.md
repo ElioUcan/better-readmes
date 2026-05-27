@@ -90,7 +90,7 @@ gh repo edit --description "{{generated description}}"
 
 Extract topics from two sources:
 
-1. **Technologies section** — map each detected technology to its GitHub topic slug:
+1. **Technologies section** — map each detected technology to its GitHub topic slug (match any line containing "Technologies", e.g. `## Technologies` or `## 🛠️ Technologies`):
    - React → `react`
    - TypeScript → `typescript`
    - Python → `python`
